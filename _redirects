@@ -1,0 +1,7 @@
+# Redirects from what the browser requests to what we serve
+/twitter            https://twitter.com/lendscape_so
+/discord            https://discord.gg
+/telegram           https://t.me/lendscape_so
+/email              https://lendscape.so/email
+/meeting            https://lendscape.so/meeting
+/*                  https://lendscape.so/
