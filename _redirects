@@ -1,7 +1,7 @@
 # Redirects from what the browser requests to what we serve
 /twitter            https://twitter.com/lendscape_so
-/discord            https://discord.gg
+/discord            https://discord.gg/K6kKuZeaEz
 /telegram           https://t.me/lendscape_so
-/email              https://lendscape.so/email
+/email              mailto:contact@lendscape.so
 /meeting            https://calendly.com/lendscape/30min
 /*                  https://lendscape.so/
