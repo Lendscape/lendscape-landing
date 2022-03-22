@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/** vars **/
+
+:root {
+	--dark-color:rgb(26,26,26);
+	--light-color:rgb(255,255,255);
+
+	--grey-color-dark:rgb(142,142,142);
+	--grey-color-light:rgb(196,196,196);
+
+	--alternate-color-dark:rgb(0,204,198);
+	--alternate-color-light:rgb(0,255,248);
+}
+
+/** body **/
+
+body[data-color="dark"] {
+	color:var(--light-color);
+	text-shadow:0 0 0 var(--light-color);
+	background:var(--dark-color);
+}
+body[data-color="light"] {
+	color:var(--dark-color);
+	text-shadow:0 0 0 var(--dark-color);
+	background:var(--light-color);
+}
+body[data-color="dark"] .icon.outline,
+body[data-color="dark"] .logo.outline {
+	stroke:var(--light-color);
+}
+body[data-color="light"] .icon.outline,
+body[data-color="light"] .icon.outline svg {
+	stroke:var(--dark-color);
+}
+
+/** background **/
+
+body[data-color="dark"] #background {
+	stroke:var(--light-color);
+	stroke:url(#line-gradient);
+}
+body[data-color="light"] #background {
+	stroke:var(--dark-color);
+	stroke:url(#line-gradient);
+}
