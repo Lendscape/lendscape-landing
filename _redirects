@@ -1,9 +1,10 @@
 # Redirects from what the browser requests to what we serve
 /twitter            https://twitter.com/lendscape_so
-/discord            https://discord.gg/K6kKuZeaEz
+/discord            https://discord.gg/lendscape
 /telegram           https://t.me/lendscape_so
 /email              mailto:contact@lendscape.so
 /meeting            https://calendly.com/lendscape/30min
+/meetings            https://calendly.com/lendscape/30min
 /brand              https://lendscape.so/assets/brand-kit.pdf
 /assets             https://www.figma.com/file/LjZ8UFXDSBSKGhxXV7l4zF/brand-assets?node-id=0%3A1
 /font               https://fonts.google.com/specimen/Sulphur+Point
