@@ -225,7 +225,7 @@ content: "\e912";
 /*********************************/
 
 body {
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Sulphur Point';
 	font-weight:300;
 }
 h1, h2, h3, h4, h5, h6,
@@ -234,7 +234,7 @@ h1, h2, h3, h4, h5, h6,
 .site-title,
 .site-baseline,
 .roadmap .step .date {
-	font-family: 'Nexa Demo', sans-serif;
+	font-family: 'Sulphur Point';
 	text-transform:uppercase;
 }
 .roadmap .step .title,

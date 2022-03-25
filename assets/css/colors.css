@@ -3,8 +3,8 @@
 /** vars **/
 
 :root {
-	--dark-color:rgb(26,26,26);
-	--light-color:rgb(255,255,255);
+	--dark-color:linear-gradient(to right, #0be6f7, #0878fc);
+	--light-color:linear-gradient(to right, #0be6f7, #0878fc);
 
 	--grey-color-dark:rgb(142,142,142);
 	--grey-color-light:rgb(196,196,196);
