@@ -48,7 +48,9 @@ i, em {
 	font-size:inherit;
 	line-height:inherit;
 }
-
+#content-logo{
+	width: 190px;
+}
 /********** HR **********/
 
 hr {
