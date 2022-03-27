@@ -141,12 +141,13 @@ img {
 /********** INTRODUCTION **********/
 
 .site-baseline {
+	font-size: 2rem;
+	font-weight: 300;
 	display:block;
-	font-size:.875em;
-	line-height:1em;
-	letter-spacing:.25em;
-	white-space:nowrap;
-	margin-top:1em !important;
+	line-height:1.1;
+	max-width: 550px;
+	margin: 0 auto;
+	text-transform: none;
 }
 .site-maintenance {
 	display:block;
@@ -190,6 +191,14 @@ img {
 	letter-spacing:.25em;
 	text-align:center;
 	text-transform:uppercase;
+}
+
+.section-title--h1 {
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 1;
+	margin-bottom: 6px;
+	text-transform: none;
 }
 
 /*******************************/
