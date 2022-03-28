@@ -1,8 +1,8 @@
 {
-  "name": "mte-nframe",
+  "name": "lendscape-webpack-build",
   "version": "2.0.0",
   "main": "index.js",
-  "author": "Made to Engage",
+  "author": "lendscape",
   "license": "MIT",
   "private": true,
   "dependencies": {
