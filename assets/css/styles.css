@@ -49,8 +49,37 @@ i, em {
 	line-height:inherit;
 }
 #content-logo{
-	width: 190px;
+	margin-bottom: 16px;
+	width: 150px;
 }
+
+.bounce {
+	animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	  transform: translateY(0);
+	}
+	40% {
+	  transform: translateY(-15px);
+	}
+	60% {
+	  transform: translateY(-5px);
+	}
+}
+
+.arrow-scroll {
+	position: absolute;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+}
+
+.arrow-scroll img {
+	width: 50px;
+}
+
 /********** HR **********/
 
 hr {
@@ -141,13 +170,21 @@ img {
 /********** INTRODUCTION **********/
 
 .site-baseline {
+	font-size: 1rem;
+	font-weight: 300;
 	display:block;
-	font-size:.8em;
-	line-height:1em;
-	letter-spacing:.25em;
-	white-space:nowrap;
-	margin-top:1em !important;
+	line-height:1.3;
+	max-width: 550px;
+	margin: 0 auto;
+	text-transform: none;
 }
+@media (min-width:760px) {
+	.site-baseline {
+		font-size: 2rem;
+		line-height: 1.1;
+	}
+}
+
 .site-maintenance {
 	display:block;
 	font-size:.75em;
@@ -190,6 +227,14 @@ img {
 	letter-spacing:.25em;
 	text-align:center;
 	text-transform:uppercase;
+}
+
+.section-title--h1 {
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 1;
+	margin-bottom: 16px;
+	text-transform: none;
 }
 
 /*******************************/
@@ -321,6 +366,54 @@ figure > svg {
 }
 #background svg {
 	max-width:50%;
+}
+
+.bg-logo-outline {
+	position: absolute;
+    top: 10vh;
+    margin: 0;
+    z-index: 1;
+}
+
+.bg-glow {
+	bottom: 0;
+	position: absolute;
+  	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	transition: all 7s linear;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+
+.bg-glow img {
+	min-width: 916px;
+}
+
+@keyframes blue-path {
+	0%   {bottom: -40vh; right: -1000px;}
+	20%  {bottom: -20vh; right: -600px;}
+	40%  {bottom: 0; right: -100px;}
+	60%  {bottom: 20vh; right: 200px;}
+	80%  {bottom: 40vh; right: 300px;}
+	100% {bottom: 60vh; right: 500px;}
+}
+
+@keyframes green-path {
+	0%   {top: -30vh; left: -1000px;}
+	20%  {top: -20vh; left: -600px;}
+	40%  {top: 0; left: -100px;}
+	60%  {top: 20vh; left: 200px;}
+	80%  {top: 40vh; left: 300px;}
+	100% {top: 60vh; left: 500px;}
+}
+
+.bg-glow--blue {
+	animation-name: blue-path;
+}
+
+.bg-glow--green {
+	animation-name: green-path;
 }
 
 /************************/

@@ -208,7 +208,6 @@ section {
 	overflow:initial;
 }
 section .content {
-	position:relative;
 	z-index:10;
 	width:100%;
 	margin-left:auto;
