@@ -1,0 +1,24 @@
+@at-root {
+    @viewport { width: device-width; }
+}
+
+html {
+    background-color: palette("white");
+    font-family: $preload-font-family;
+    font-size: calc($base-font-size / 16px) * 1em;
+    line-height: $base-line-height;
+    min-height: 100%;
+    overflow-y: auto;
+    text-rendering: $render-mode;
+    text-size-adjust: 100%;
+}
+
+body {
+	height: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $base-font-family;
+}
+
+section.main {
+    max-width: 100%;
+}

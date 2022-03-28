@@ -8,11 +8,11 @@
 
 @font-face {
 	font-family:'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon.svg#fontello') format('svg');
+	src:url('/fonts/icomoon.eot');
+	src:url('/fonts/icomoon.eot#iefix') format('embedded-opentype'),
+		url('/fonts/icomoon.woff') format('woff'),
+		url('/fonts/icomoon.ttf') format('truetype'),
+		url('/fonts/icomoon.svg#fontello') format('svg');
 	font-weight:normal;
 	font-style:normal;
 	font-display: swap;
@@ -193,24 +193,24 @@ content: "\e912";
 
 @font-face {
     font-family: 'Nexa Demo';
-    src: url('fonts/NexaDemo-Bold.html');
-    src: url('fonts/NexaDemo-Boldd41d.html?#iefix') format('embedded-opentype'),
-        url('fonts/NexaDemo-Bold-2.html') format('woff2'),
-        url('fonts/NexaDemo-Bold-3.html') format('woff'),
-        url('fonts/NexaDemo-Bold-4.html') format('truetype'),
-        url('fonts/NexaDemo-Bold-5.html#NexaDemo-Bold') format('svg');
+    src: url('/fonts/NexaDemo-Bold.html');
+    src: url('/fonts/NexaDemo-Boldd41d.html?#iefix') format('embedded-opentype'),
+        url('/fonts/NexaDemo-Bold-2.html') format('woff2'),
+        url('/fonts/NexaDemo-Bold-3.html') format('woff'),
+        url('/fonts/NexaDemo-Bold-4.html') format('truetype'),
+        url('/fonts/NexaDemo-Bold-5.html#NexaDemo-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Nexa Text Demo';
-    src: url('fonts/NexaTextDemo-Bold.html');
-    src: url('fonts/NexaTextDemo-Boldd41d.html?#iefix') format('embedded-opentype'),
-        url('fonts/NexaTextDemo-Bold-2.html') format('woff2'),
-        url('fonts/NexaTextDemo-Bold-3.html') format('woff'),
-        url('fonts/NexaTextDemo-Bold-4.html') format('truetype'),
-        url('fonts/NexaTextDemo-Bold-5.html#NexaTextDemo-Bold') format('svg');
+    src: url('/fonts/NexaTextDemo-Bold.html');
+    src: url('/fonts/NexaTextDemo-Boldd41d.html?#iefix') format('embedded-opentype'),
+        url('/fonts/NexaTextDemo-Bold-2.html') format('woff2'),
+        url('/fonts/NexaTextDemo-Bold-3.html') format('woff'),
+        url('/fonts/NexaTextDemo-Bold-4.html') format('truetype'),
+        url('/fonts/NexaTextDemo-Bold-5.html#NexaTextDemo-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;

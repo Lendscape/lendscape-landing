@@ -1,0 +1,5 @@
+@inherits System.Web.Mvc.WebViewPage
+
+<% _.forEach(htmlWebpackPlugin.files.css, function(file) { %>
+    <link rel="stylesheet" href="<%= file%>" />
+<%}); %>

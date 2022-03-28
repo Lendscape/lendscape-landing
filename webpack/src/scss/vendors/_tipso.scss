@@ -1,0 +1,77 @@
+/* _vendor.tipso.scss */
+
+/* Tipso Bubble Styles */
+.tipso_bubble,
+.tipso_bubble > .tipso_arrow {
+	box-sizing: border-box;
+}
+
+.tipso_bubble {
+	border-radius: 6px;
+	text-align: center;
+    position: absolute;
+    z-index: 9999;
+}
+
+.tipso_style {
+	cursor: help;
+	border-bottom: 1px dotted;
+}
+
+.tooltip_title {
+	border-radius: 6px 6px 0 0;
+}
+
+.tooltip_content {
+  	word-wrap: break-word;
+	padding: 0.5em;
+}
+
+/* Tipso Bubble Div */
+.tipso_bubble > .tipso_arrow {
+	border: 8px solid;
+    height: 0;
+    pointer-events: none;
+	position: absolute;
+    width: 0;
+}
+
+.tipso_bubble.top > .tipso_arrow {
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: #000;
+	left: 50%;
+	margin-left: -8px;
+	top: 100%;
+}
+
+.tipso_bubble.bottom > .tipso_arrow {
+	border-bottom-color: #000;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -8px;
+}
+
+.tipso_bubble.left > .tipso_arrow {
+	border-bottom-color: transparent;
+	border-left-color: #000;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	left: 100%;
+	margin-top: -8px;
+	top: 50%;
+}
+
+.tipso_bubble.right > .tipso_arrow {
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-right-color: #000;
+	border-top-color: transparent;
+	margin-top: -8px;
+	right: 100%;
+	top: 50%;
+}

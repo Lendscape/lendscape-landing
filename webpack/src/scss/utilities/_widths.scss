@@ -1,0 +1,40 @@
+/* _utility.widths.scss */
+
+// Deprechiated as IE10 does not support flex-basis
+// Width attribute
+$width-attribute: "width";
+//@if $enable-flex {
+//	$width-attribute: 'flex';
+//}
+
+@include width-setup("u-width", $width-attribute);
+@include width-setup("u-w", $width-attribute);
+
+@if $responsive {
+
+	@each $name in $breakpoint-modifiers {
+		@include media($name) {
+		   @include width-setup("u-width", $width-attribute, "\\@"+$name);
+		   @include width-setup("u-w", $width-attribute, "\\@"+$name);
+		}
+	}
+
+}
+
+.u-w-auto,
+.u-width-auto {
+    width: auto;
+}
+
+@if $responsive {
+	@each $name in $breakpoint-modifiers {
+		@include media($name) {
+			.u-w-auto,
+            .u-width-auto {
+				&\@#{$name} {
+					width: auto;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+@inherits System.Web.Mvc.WebViewPage
+
+<% _.forEach(htmlWebpackPlugin.files.css, function(file) { %>
+    <link rel="stylesheet" href="<%= file%>" />
+<%}); %>
+
+<% _.forEach(htmlWebpackPlugin.files.js, function(file) { %>
+    <script defer type="text/javascript" src="<%= file%>"></script>
+<%}); %>

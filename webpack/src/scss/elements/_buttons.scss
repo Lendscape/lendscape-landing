@@ -1,0 +1,22 @@
+/* _element.buttons.scss */
+
+[role="button"] {
+	cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+// Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+	touch-action: manipulation;
+}

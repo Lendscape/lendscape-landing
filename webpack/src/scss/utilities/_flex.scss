@@ -1,0 +1,95 @@
+/* _utility.flex.scss */
+
+//
+// Standard Declarations
+
+//
+// justify-content
+.u-flex-justify-center {
+	justify-content: center;
+}
+
+.u-flex-justify-start {
+	justify-content: flex-start;
+}
+
+.u-flex-justify-between {
+	justify-content: space-between;
+}
+
+.u-flex-justify-end {
+	justify-content: flex-end;
+}
+
+.u-flex-align-center {
+	align-items: center;
+}
+
+.u-flex-align-flex-start {
+	align-items: flex-start;
+}
+
+.u-flex-align-flex-end {
+	align-items: flex-end;
+}
+
+.u-flex-align-stretch {
+	align-items: stretch;
+}
+
+.u-flex-wrap {
+	flex-wrap: wrap;
+}
+
+.u-flex-direction-column {
+	flex-direction: column;
+}
+
+.u-flex-1 {
+	flex: 1;
+}
+
+//
+// Responsive Declarations
+@if $responsive {
+	@each $name in $breakpoint-modifiers {
+		@include media($name) {
+
+			.u-flex-justify-center {
+				&\@#{$name} {
+					justify-content: center;
+				}
+			}
+			.u-flex-justify-between {
+				&\@#{$name} {
+					justify-content: space-between;
+				}
+			}
+			.u-flex-justify-end {
+				&\@#{$name} {
+					justify-content: flex-end;
+				}
+			}
+			.u-flex-align-center {
+				&\@#{$name} {
+					align-items: center;
+				}
+			}
+			.u-flex-align-flex-end {
+				&\@#{$name} {
+					align-items: flex-end;
+				}
+			}
+			.u-flex-wrap {
+				&\@#{$name} {
+					flex-wrap: wrap;
+				}
+			}
+			.u-flex-direction-column {
+				&\@#{$name} {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+/* _utility.heights.scss */
+
+@if $enable-flex {
+
+    .u-height-a {
+        height: auto;
+    }
+
+    .u-height-100pc {
+        height:100%;
+    }
+
+    .u-height-100vh {
+        height:100vh;
+    }
+
+    @include width-setup("u-height", "height");
+    @include width-setup("u-height", "min-height"); // Safari bug fix
+
+    @if $responsive {
+
+        @each $name in $breakpoint-modifiers {
+            @include media($name) {
+            @include width-setup("u-height", "height", "\\@"+$name);
+            @include width-setup("u-height", "min-height", "\\@"+$name); // Safari bug fix
+            }
+        }
+
+    }
+}

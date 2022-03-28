@@ -1,0 +1,25 @@
+@use 'sass:math';
+
+//===========================
+//=            REM          =
+//===========================
+@mixin rem($property, $values...) {
+    $max: length($values);
+    //$pxValues: "";
+    $remValues: "";
+
+    @for $i from 1 through $max {
+        $value: strip-units(nth($values, $i));
+    }
+
+    @for $i from 1 through $max {
+        $value: strip-units(nth($values, $i));
+        $remValues: #{$remValues + math.div($value, strip-units($base-font-size))}rem;
+
+        @if $i < $max {
+                $remValues: #{$remValues + " "};
+        }
+    }
+
+    #{$property}: $remValues;
+}

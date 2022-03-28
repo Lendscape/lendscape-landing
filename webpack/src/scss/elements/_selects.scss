@@ -1,0 +1,15 @@
+/* _element.selects.scss */
+
+select {
+	background: transparent;
+	border: none;
+	line-height: initial;
+	-webkit-appearance: none;
+	-moz-appearance: window;
+	appearance: none;
+	border-radius: 0;
+}
+
+select::-ms-expand {
+    display: none;
+}

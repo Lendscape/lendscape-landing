@@ -1,0 +1,38 @@
+/* _element.headings.scss */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $dark-grey;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: $base-line-height;
+    text-rendering: optimizeLegibility;
+}
+
+@each $header, $font in map-get($headings, "xl") {
+    #{$header} {
+        @include rem(font-size, nth($font, 1));
+        @if length($font) > 1 {
+            line-height: calc(nth($font, 2) / nth($font, 1));
+        }
+    }
+}
+
+@if $responsive {
+    @each $size, $headers in $headings {
+        @include media($size) {
+            @each $header, $font in $headers {
+                #{$header} {
+                    @include rem(font-size, nth($font, 1));
+                    @if length($font) > 1 {
+                        line-height: calc(nth($font, 2) / nth($font, 1));
+                    }
+                }
+            }
+        }
+    }
+}

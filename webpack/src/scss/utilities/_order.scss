@@ -1,0 +1,42 @@
+/* _utility.order.scss */
+
+@if $responsive AND $enable-flex {
+
+    // Custom Flex Order
+    .u-order- {
+        @for $i from 1 through 12 {
+
+            &#{$i} {
+                order: $i;
+            }
+        }
+    }
+    
+    // Responsive Modifiers
+    @each $property-namespace, $property in $spacing-properties {
+
+        @each $direction-namespace, $direction-rules in $spacing-directions {
+
+            @each $name in $breakpoint-modifiers {
+
+                @include media($name) {
+
+                    .u-order- {
+                        @for $i from 1 through 12 {
+                            &#{$i} {
+                                &\@#{$name} {
+                                    order: $i;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

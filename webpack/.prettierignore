@@ -1,0 +1,13 @@
+*.*
+!*.css
+!*.js
+!*.json
+!*.jsx
+!*.md
+!*.mdx
+!*.ts
+!*.tsx
+!*.ts
+!*.scss
+
+stats.json

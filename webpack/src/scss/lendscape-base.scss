@@ -1,0 +1,106 @@
+// SCSS Standard Build File
+@charset "utf-8";
+
+// Generic
+@import 
+"generic/normalize",
+"generic/box-sizing";
+
+
+// Config
+@import 
+"configs/type",
+"configs/global",
+"configs/grid",
+"configs/space",
+"configs/colors";
+
+// Tools
+@import 
+"tools/clearfix",
+"tools/functions",
+"tools/media",
+"tools/rem",
+"tools/text-color",
+"tools/widths";
+
+// Elements
+@import 
+"elements/buttons",
+"elements/address",
+"elements/headings",
+"elements/images",
+"elements/inputs",
+"elements/links",
+"elements/lists",
+"elements/page",
+"elements/rule",
+"elements/quotes",
+"elements/selects";
+
+// Objects
+@import 
+"objects/grid",
+"objects/ratio",
+"objects/wrappers";
+
+// Base
+@import 
+"base/animation",
+"base/fonts";
+
+// Themes
+@import 
+"themes/home";
+
+// Scopes
+@import 
+"scopes/wysiwyg";
+
+// Vendors
+@import 
+"vendors/slick",
+"vendors/tipso";
+
+// Utilities
+@import 
+"utilities/align",
+"utilities/backgrounds",
+"utilities/border",
+"utilities/center",
+"utilities/clearfix",
+"utilities/colors",
+"utilities/cursor",
+"utilities/display",
+"utilities/flex",
+"utilities/floats",
+"utilities/font-family",
+"utilities/font-size",
+"utilities/font-style",
+"utilities/font-weight",
+"utilities/heights",
+"utilities/line-height",
+"utilities/lists",
+"utilities/order",
+"utilities/overflow",
+"utilities/position",
+"utilities/pull",
+"utilities/push",
+"utilities/spacing",
+"utilities/text-decoration",
+"utilities/text-transform",
+"utilities/type",
+"utilities/underline",
+"utilities/widths",
+"utilities/misc";
+
+// Necessary evil, leave this last
+@import 
+"utilities/print";
+
+@import 
+"animations",
+"fonts",
+"navigation",
+"structure",
+"styles";

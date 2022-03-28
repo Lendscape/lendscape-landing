@@ -1,0 +1,197 @@
+/* _object.grid.scss */
+
+/**
+ * Grid wrapper setup, supports inline-block & flex modes
+ * change in _config.grid.scss
+ */
+.o-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -(calc($grid__gutter / 2));
+    margin-right: -(calc($grid__gutter / 2));
+    position: relative;
+
+    @if $enable-flex {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    @include media(m) {
+        margin-right: -(calc($grid__gutter / 4));
+        margin-left: -(calc($grid__gutter / 4));
+    }
+}
+
+
+    .o-grid__item {
+        padding-left: calc($grid__gutter / 2);
+        padding-right: calc($grid__gutter / 2);
+        position: relative;
+
+        @if (not $enable-flex) {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        @include media(m) {
+            padding-right: calc($grid__gutter / 4);
+            padding-left: calc($grid__gutter / 4);
+        }
+    }
+
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+.o-grid--rev {
+    direction: rtl;
+    text-align: left;
+
+    > .o-grid__item {
+        direction: ltr;
+        text-align: left;
+    }
+}
+
+/**
+ * Align grid as a vertical column. Extends `.grid`.
+ */
+@if $enable-flex {
+    .o-grid--columns {
+        flex-direction: column;
+    }
+}
+
+
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends `.grid`.
+ */
+.o-grid--full {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .o-grid__item {
+        padding: 0;
+    }
+}
+
+
+/**
+ * Fill grids will allow us to autofill height for flex based grids.
+ * Extends `.grid`.
+ */
+ @if $enable-flex {
+    .o-grid--fill {
+        align-items: stretch;
+    }
+}
+
+
+/**
+ * Align the entire grid to the right. Extends `.grid`.
+ */
+.o-grid--right {
+    @if $enable-flex {
+        justify-content: flex-end;
+
+    }
+    @else {
+        text-align: right;
+
+        > .o-grid__item {
+            text-align: left;
+        }
+    }
+}
+
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+.o-grid--center {
+    @if $enable-flex {
+        justify-content: center;
+
+    }
+    @else {
+        text-align: center;
+
+        > .o-grid__item {
+            text-align: left;
+        }
+    }
+}
+
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+.o-grid--middle {
+
+    > .o-grid__item {
+        @if $enable-flex {
+            align-self: center;
+
+        }
+        @else {
+            vertical-align: middle;
+        }
+    }
+}
+
+.o-grid--bottom {
+
+    > .o-grid__item {
+        @if $enable-flex {
+            align-self: flex-end;
+
+        }
+        @else {
+            vertical-align: bottom;
+        }
+    }
+}
+
+
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+.o-grid--narrow {
+    margin-right: -(calc($grid__gutter / 4));
+    margin-left: -(calc($grid__gutter / 4));
+
+    > .o-grid__item {
+        padding-right: calc($grid__gutter / 4);
+        padding-left: calc($grid__gutter / 4);
+    }
+}
+
+
+/**
+ * Create grids with wider gutters. Extends `.grid`.
+ */
+.o-grid--wide {
+    padding-right: $grid__gutter;
+    padding-left: $grid__gutter;
+
+    > .o-grid__item {
+        padding-right: $grid__gutter;
+        padding-left: $grid__gutter;
+    }
+}
+
+
+/**
+ * Flex basis modify. Extends `.grid`.
+ */
+ .o-grid--unwrap {
+    flex-wrap: nowrap;
+}
