@@ -4,7 +4,7 @@ $responsive: true !default;
 
 //
 // Mobile first build
-$mobile-first: false !default;
+$mobile-first: true !default;
 
 //
 // Would you like push and pull classes enabled?
@@ -37,11 +37,11 @@ $breakpoints:(
 );
 */
 $breakpoints:(
-    "xs" "(max-width: 375px)", // 375 <-
-    "s" "(max-width: 479px)",  // 375 <-> 480
-    "m" "(max-width: 768px)",  // 480 <-> 768
-    "l" "(max-width: 1024px)", // 768 <-> 1024
-    "xl" "(max-width: 1279px)" // 1024 ->
+    "xs" "(min-width: 375px)", // 375 <-
+    "s" "(min-width: 479px)",  // 375 <-> 480
+    "m" "(min-width: 768px)",  // 480 <-> 768
+    "l" "(min-width: 1024px)", // 768 <-> 1024
+    "xl" "(min-width: 1279px)" // 1024 ->
 ) !default;
 
 //
