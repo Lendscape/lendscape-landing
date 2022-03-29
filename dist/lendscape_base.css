@@ -752,7 +752,6 @@ html {
   font-size: 1em;
   line-height: 1.5;
   min-height: 100%;
-  overflow-y: auto;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
@@ -17804,13 +17803,6 @@ ol li:before {
 /********** GLOBAL **********/
 /****************************/
 /****************************/
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  width: 100%;
-}
-
 /********** BODY **********/
 body {
   -webkit-overflow-scrolling: touch;
@@ -18019,6 +18011,7 @@ section.container {
 
 .section .content > * {
   opacity: 0;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .section.active .content > * {
@@ -18130,6 +18123,12 @@ header .index {
   display: flex;
   align-items: center;
   margin: 1.5rem;
+  font-size: 0.625rem;
+}
+@media only screen and (min-width: 768px) {
+  header .index {
+    margin: 2rem;
+  }
 }
 
 header .index svg {
@@ -18137,6 +18136,23 @@ header .index svg {
   height: 100%;
   height: inherit;
   width: inherit;
+}
+
+header .index figure {
+  height: 2.25rem;
+  width: 3rem;
+  font-size: 3rem;
+}
+@media only screen and (min-width: 768px) {
+  header .index figure {
+    height: 3rem;
+    width: 4rem;
+    font-size: 4rem;
+  }
+}
+
+header .index .index-infos {
+  display: none;
 }
 
 /********************************/
@@ -18364,4 +18380,4 @@ header .index {
           animation: spinner 0.5s infinite linear;
 }
 
-/*# sourceMappingURL=lendscape_base.css.map?v=8b7cdaa96879bd6fe941*/
+/*# sourceMappingURL=lendscape_base.css.map?v=b67a1527de93205bc176*/

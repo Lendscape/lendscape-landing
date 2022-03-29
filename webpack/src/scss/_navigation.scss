@@ -94,12 +94,31 @@ header .index {
 	display:flex;
 	align-items:center;
 	margin:1.5rem;
+	font-size:.625rem;
+
+	@include media(m) {
+		margin:2rem;
+	}
 }
 header .index svg {
 	display:block;
 	height:100%;
 	height:inherit;
 	width:inherit;
+}
+header .index figure {
+	height:2.25rem;
+	width:3rem;
+	font-size:3rem;
+
+	@include media(m) {
+		height:3rem;
+		width:4rem;
+		font-size:4rem;
+	}
+}
+header .index .index-infos {
+	display:none;
 }
 
 /********************************/

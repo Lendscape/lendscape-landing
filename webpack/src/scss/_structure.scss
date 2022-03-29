@@ -6,13 +6,6 @@
 /****************************/
 /****************************/
 
-html, body {
-	margin:0;
-	padding:0;
-	border:0;
-	width:100%;
-}
-
 /********** BODY **********/
 
 body {
@@ -213,6 +206,7 @@ section.container {
 
 .section .content > * {
 	opacity:0;
+	transition: opacity 0.25s ease-in-out;
 }
 .section.active .content > * {
 	opacity:1;
