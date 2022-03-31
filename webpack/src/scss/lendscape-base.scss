@@ -27,7 +27,6 @@
 // Elements
 @import 
 "elements/buttons",
-"elements/address",
 "elements/headings",
 "elements/images",
 "elements/inputs",
@@ -41,7 +40,6 @@
 // Objects
 @import 
 "objects/grid",
-"objects/ratio",
 "objects/wrappers";
 
 // Base
@@ -53,27 +51,15 @@
 @import 
 "themes/home";
 
-// Scopes
-@import 
-"scopes/wysiwyg";
-
-// Vendors
-@import 
-"vendors/slick",
-"vendors/tipso";
-
 // Utilities
 @import 
 "utilities/align",
 "utilities/backgrounds",
 "utilities/border",
 "utilities/center",
-"utilities/clearfix",
 "utilities/colors",
-"utilities/cursor",
 "utilities/display",
 "utilities/flex",
-"utilities/floats",
 "utilities/font-family",
 "utilities/font-size",
 "utilities/font-style",
@@ -84,15 +70,12 @@
 "utilities/order",
 "utilities/overflow",
 "utilities/position",
-"utilities/pull",
-"utilities/push",
 "utilities/spacing",
 "utilities/text-decoration",
 "utilities/text-transform",
 "utilities/type",
 "utilities/underline",
-"utilities/widths",
-"utilities/misc";
+"utilities/widths";
 
 // Necessary evil, leave this last
 @import 
