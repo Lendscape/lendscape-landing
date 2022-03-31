@@ -9,8 +9,8 @@ const ForkTsCheckerNotifierWebpackPlugin = require("fork-ts-checker-notifier-web
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const isDevelopment = process.env.NODE_ENV === "development";
-const config = require("./nFrame.config");
-const displayConsoleMessage = require("./nFrame.message");
+const config = require("./webpack.config");
+const displayConsoleMessage = require("./webpack.message");
 
 // Combines the config entrypoints with the blocks in SCSS
 // This allows for code splitting and generation of seperate partials

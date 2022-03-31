@@ -5,7 +5,7 @@ module.exports = {
   OUTPUT_DIR: "../../dist/",
 
   // The path to the bundle in the URL
-  PUBLIC_PATH: "/nFrame/dist/",
+  PUBLIC_PATH: "/webpack/dist/",
 
   // Create different entries if you want to generate multiple manual bundles.
   // import() statement will still split chunks inside these bundles.
