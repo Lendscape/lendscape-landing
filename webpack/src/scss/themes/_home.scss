@@ -5,3 +5,22 @@
 // .t-home {
     
 // }
+
+[data-color="dark"] {
+    #wrapper {
+        background-color: #242A31;
+    }
+    p {
+        color: white;
+    }
+
+    .bg-glow-wrap {
+        opacity: 0;
+    }
+}
+
+[data-color="light"] {
+    #wrapper {
+        background-color: white;
+    }
+}

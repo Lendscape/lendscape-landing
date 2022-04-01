@@ -20,6 +20,7 @@ body {
 #wrapper {
 	position:relative;
 	min-height:100%;
+	transition: all 0.5s ease-in-out;
 }
 
 /********** HEADER **********/
@@ -175,6 +176,8 @@ section .content + .content.fit {
 
 section.container {
 	padding:0 !important;
+	position: relative;
+	z-index: 3;
 }
 
 /** SECTIONS **/

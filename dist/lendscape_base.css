@@ -1166,14 +1166,6 @@ select::-ms-expand {
 /********** ICONS **********/
 /***************************/
 /***************************/
-@font-face {
-  font-family: "icomoon";
-  src: url(../../dist/d0f8ff8776cc00593ed4.eot);
-  src: url(../../dist/d0f8ff8776cc00593ed4.eot#iefix) format("embedded-opentype"), url(../../dist/7d1f49c54b8c445d432e.woff) format("woff"), url(../../dist/44550f40002f412f2b02.ttf) format("truetype"), url(../../dist/2c306ff13f8e0469ae9d.svg#fontello) format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 [class^=icon-] {
   display: inline-flex;
   align-items: center;
@@ -1196,6 +1188,11 @@ select::-ms-expand {
   color: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom, #0BE3F7 0%, #0874FC 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /********** ICONS **********/
@@ -1570,6 +1567,20 @@ nav + *,
 }
 
 /* _theme.home.scss */
+[data-color=dark] #wrapper {
+  background-color: #242A31;
+}
+[data-color=dark] p {
+  color: white;
+}
+[data-color=dark] .bg-glow-wrap {
+  opacity: 0;
+}
+
+[data-color=light] #wrapper {
+  background-color: white;
+}
+
 /* _utility.align.scss */
 .u-align-left,
 .u-a-left {
@@ -16409,8 +16420,8 @@ input, textarea, button, select {
 }
 
 p {
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 20px;
+  line-height: 1;
   color: inherit;
   text-shadow: inherit;
 }
@@ -16556,10 +16567,6 @@ img {
 /********** TITLES **********/
 /****************************/
 /****************************/
-/*
-.brand-title
-.section-title
-*/
 /********** BRAND-TITLE **********/
 .brand-title {
   letter-spacing: 1em;
@@ -16568,6 +16575,7 @@ img {
 /********** SECTION-TITLE **********/
 .section-title {
   letter-spacing: 0.25em;
+  margin-bottom: 64px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -16713,9 +16721,25 @@ figure > svg {
 }
 
 .bg-logo-outline {
-  position: absolute;
-  top: 10vh;
+  max-width: 1076px;
+  position: fixed;
+  width: 100%;
   margin: 0;
+  top: 0;
+  z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  .bg-logo-outline {
+    top: 10vh;
+  }
+}
+
+.bg-glow-wrap {
+  height: 100vh;
+  opacity: 1;
+  position: fixed;
+  transition: 0.5s ease-in-out;
+  width: 100vw;
   z-index: 1;
 }
 
@@ -17349,7 +17373,7 @@ ol li:before {
 
 /********** ITEM CONTENT **********/
 .grid .item-content > .icon {
-  margin: 0 auto;
+  margin: 0 auto 48px;
 }
 
 /****************************/
@@ -17369,6 +17393,7 @@ body {
 #wrapper {
   position: relative;
   min-height: 100%;
+  transition: all 0.5s ease-in-out;
 }
 
 /********** HEADER **********/
@@ -17533,6 +17558,8 @@ section .content + .content.fit {
 /* .section == segment for navigation */
 section.container {
   padding: 0 !important;
+  position: relative;
+  z-index: 3;
 }
 
 /** SECTIONS **/
@@ -17934,4 +17961,4 @@ header .index {
           animation: spinner 0.5s infinite linear;
 }
 
-/*# sourceMappingURL=lendscape_base.css.map?v=fd5467b9261fa23eb7c2*/
+/*# sourceMappingURL=lendscape_base.css.map?v=e3ae98bf7ab2ab6f52a4*/

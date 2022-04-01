@@ -36,10 +36,10 @@ input, textarea, button, select {
 	font-weight:inherit;
 }
 p {
-	font-size:inherit;
-	line-height:inherit;
-	color:inherit;
-	text-shadow:inherit;
+	font-size: 20px;
+	line-height: 1;
+	color: inherit;
+	text-shadow: inherit;
 }
 b, strong, del,
 i, em {
@@ -180,11 +180,6 @@ img {
 /****************************/
 /****************************/
 
-/*
-.brand-title
-.section-title
-*/
-
 /********** BRAND-TITLE **********/
 
 .brand-title {
@@ -195,6 +190,7 @@ img {
 
 .section-title {
 	letter-spacing:.25em;
+	margin-bottom: space(8);
 	text-align:center;
 	text-transform:uppercase;
 }
@@ -203,7 +199,7 @@ img {
 	font-weight: 700;
 	letter-spacing: 0;
 	line-height: 1;
-	margin-bottom: 16px;
+	margin-bottom: space(2);
 	text-transform: none;
 }
 
@@ -333,10 +329,25 @@ figure > svg {
 }
 
 .bg-logo-outline {
-	position: absolute;
-    top: 10vh;
+	max-width: 1076px;
+	position: fixed;
+	width: 100%;
     margin: 0;
-    z-index: 1;
+    top: 0;
+    z-index: 2;
+
+	@include media(m) {
+		top: 10vh;
+	}
+}
+
+.bg-glow-wrap {
+	height: 100vh;
+	opacity: 1;
+	position: fixed;
+	transition: 0.5s ease-in-out;
+	width: 100vw;
+	z-index: 1;
 }
 
 .bg-glow {
@@ -946,5 +957,5 @@ ol li:before {
 /********** ITEM CONTENT **********/
 
 .grid .item-content > .icon {
-	margin:0 auto;
+	margin:0 auto space(6);
 }
