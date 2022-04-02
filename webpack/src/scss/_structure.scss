@@ -175,7 +175,7 @@ section .content + .content.fit {
 /* .section == segment for navigation */
 
 section.container {
-	padding:0 !important;
+	padding:0 0 space(8) !important;
 	position: relative;
 	z-index: 3;
 }
@@ -202,8 +202,7 @@ section.container {
 
 .section .content {
 	@include media(l) {
-		max-width:50rem;
-		max-width:60rem;
+		max-width:1300px;
 	}
 }
 

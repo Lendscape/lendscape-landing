@@ -10,7 +10,7 @@
     #wrapper {
         background-color: #242A31;
     }
-    p {
+    p, h2 {
         color: white;
     }
 
@@ -22,5 +22,47 @@
 [data-color="light"] {
     #wrapper {
         background-color: white;
+    }
+    p, h2 {
+        color: $black;
+    }
+}
+
+body:not(.introduced) {
+    .bg-logo-outline svg {
+        path {
+            stroke-width: 1;
+        }
+    }
+}
+
+body[data-color="light"]:not(.introduced) {
+    .bg-logo-outline {
+        opacity: 0.5;
+    }
+
+    .bg-logo-outline .path1,
+    .bg-logo-outline .path2 {
+        stroke: url(#on-light);
+    }
+}
+
+body[data-color="dark"]:not(.introduced) {
+    .bg-logo-outline {
+        opacity: 0.5;
+    }
+
+    .bg-logo-outline .path1,
+    .bg-logo-outline .path2 {
+        stroke: url(#on-dark);
+    }
+
+    .contextual a span {
+        color: white;
+    }
+
+    .contextual.for-sections a:before,
+    .contextual.for-sections a.active:before {
+        background: white;
     }
 }

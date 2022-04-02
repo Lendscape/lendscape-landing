@@ -492,7 +492,6 @@ h5,
 h6 {
   color: #000000;
   font-weight: 400;
-  letter-spacing: -0.02em;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 }
@@ -948,7 +947,7 @@ select::-ms-expand {
   margin-right: auto;
   padding-right: 32px;
   width: 100%;
-  max-width: 1244px;
+  max-width: 1300px;
 }
 @media only screen and (min-width: 1024px) {
   .o-wrapper,
@@ -1472,11 +1471,11 @@ h3, h4, h5, h6 {
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 40px;
 }
 @media only screen and (min-width: 768px) {
   .section-title {
-    font-size: 5rem;
+    font-size: 64px;
   }
 }
 
@@ -1570,7 +1569,7 @@ nav + *,
 [data-color=dark] #wrapper {
   background-color: #242A31;
 }
-[data-color=dark] p {
+[data-color=dark] p, [data-color=dark] h2 {
   color: white;
 }
 [data-color=dark] .bg-glow-wrap {
@@ -1579,6 +1578,36 @@ nav + *,
 
 [data-color=light] #wrapper {
   background-color: white;
+}
+[data-color=light] p, [data-color=light] h2 {
+  color: #000000;
+}
+
+body:not(.introduced) .bg-logo-outline svg path {
+  stroke-width: 1;
+}
+
+body[data-color=light]:not(.introduced) .bg-logo-outline {
+  opacity: 0.5;
+}
+body[data-color=light]:not(.introduced) .bg-logo-outline .path1,
+body[data-color=light]:not(.introduced) .bg-logo-outline .path2 {
+  stroke: url(#on-light);
+}
+
+body[data-color=dark]:not(.introduced) .bg-logo-outline {
+  opacity: 0.5;
+}
+body[data-color=dark]:not(.introduced) .bg-logo-outline .path1,
+body[data-color=dark]:not(.introduced) .bg-logo-outline .path2 {
+  stroke: url(#on-dark);
+}
+body[data-color=dark]:not(.introduced) .contextual a span {
+  color: white;
+}
+body[data-color=dark]:not(.introduced) .contextual.for-sections a:before,
+body[data-color=dark]:not(.introduced) .contextual.for-sections a.active:before {
+  background: white;
 }
 
 /* _utility.align.scss */
@@ -1864,7 +1893,7 @@ nav + *,
 }
 /* _utility.backgrounds.scss */
 .u-bg-black {
-  background-color: #000000;
+  background-color: #111111;
 }
 .u-bg-dark-blue {
   background-color: #202930;
@@ -1970,7 +1999,7 @@ nav + *,
 /* _utility.colors.scss */
 .u-color-black,
 .u-c-black {
-  color: #000000;
+  color: #111111;
 }
 .u-color-dark-blue,
 .u-c-dark-blue {
@@ -16529,7 +16558,7 @@ img {
 
 /********** INTRODUCTION **********/
 .site-baseline {
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: 300;
   display: block;
   line-height: 1.3;
@@ -16539,7 +16568,7 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .site-baseline {
-    font-size: 2rem;
+    font-size: 32px;
     line-height: 1.1;
   }
 }
@@ -16574,7 +16603,6 @@ img {
 
 /********** SECTION-TITLE **********/
 .section-title {
-  letter-spacing: 0.25em;
   margin-bottom: 64px;
   text-align: center;
   text-transform: uppercase;
@@ -16721,17 +16749,20 @@ figure > svg {
 }
 
 .bg-logo-outline {
-  max-width: 1076px;
+  max-width: 800px;
   position: fixed;
   width: 100%;
   margin: 0;
-  top: 0;
+  top: 20vh;
   z-index: 2;
 }
 @media only screen and (min-width: 768px) {
   .bg-logo-outline {
     top: 10vh;
   }
+}
+.bg-logo-outline svg path {
+  transition: stroke-width 0.5s ease-in-out;
 }
 
 .bg-glow-wrap {
@@ -16794,22 +16825,9 @@ figure > svg {
   display: inline-flex;
   width: 100%;
   max-width: 16rem;
-  font-size: 1em;
-  line-height: 1em;
   text-align: center;
   justify-content: center;
   margin: auto;
-}
-
-.icon.large {
-  font-size: 3em;
-  font-size: 4em;
-}
-
-.icon svg,
-.icon img {
-  height: 1em;
-  width: 1em;
 }
 
 .icon.outline {
@@ -16817,6 +16835,10 @@ figure > svg {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.arrow-down {
+  width: 32px;
 }
 
 /** feather **/
@@ -16841,11 +16863,11 @@ figure > svg {
   display: flex;
   overflow: visible;
   margin: auto;
-  max-width: 16.5rem;
+  max-width: 64px;
 }
 @media only screen and (min-width: 768px) {
   .logo {
-    max-width: 25rem;
+    max-width: 124px;
   }
 }
 
@@ -17328,36 +17350,46 @@ ol li:before {
   width: 100%;
   flex-direction: row;
   border: solid 0.75rem transparent;
-  border-left: solid 0.375rem transparent;
-  border-right: solid 0.375rem transparent;
+  border-left-width: 8px;
+  border-right-width: 8px;
+  margin-bottom: 24px;
 }
 @media only screen and (min-width: 768px) {
   .grid .item {
     width: 33.3333333333%;
     border: solid 2rem transparent;
-    border-left: solid 0.5rem transparent;
-    border-right: solid 0.5rem transparent;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    margin-bottom: 0;
   }
 }
 
 .grid.even .item {
-  width: 50%;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .grid.even .item {
     width: 33.3333333333%;
     border: solid 2rem transparent;
-    border-left: solid 0.5rem transparent;
-    border-right: solid 0.5rem transparent;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .grid.alt .item {
+    width: 50%;
+    border: solid 2rem transparent;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .grid.alt .item {
     width: 25%;
     border: solid 2rem transparent;
-    border-left: solid 0.5rem transparent;
-    border-right: solid 0.5rem transparent;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
   }
 }
 
@@ -17373,7 +17405,49 @@ ol li:before {
 
 /********** ITEM CONTENT **********/
 .grid .item-content > .icon {
-  margin: 0 auto 48px;
+  margin: 0 auto 24px;
+}
+@media only screen and (min-width: 768px) {
+  .grid .item-content > .icon {
+    margin-bottom: 40px;
+  }
+}
+
+#about .icon {
+  max-height: 45px;
+  min-height: 45px;
+}
+@media only screen and (min-width: 768px) {
+  #about .icon {
+    max-height: 90px;
+    min-height: 90px;
+  }
+}
+
+#value-proposition .icon {
+  margin-bottom: 16px;
+  max-height: 45px;
+  min-height: 45px;
+}
+@media only screen and (min-width: 768px) {
+  #value-proposition .icon {
+    margin-bottom: 32px;
+    max-height: 100px;
+    min-height: 100px;
+  }
+}
+
+#token .icon {
+  margin-bottom: 16px;
+  max-height: 45px;
+  min-height: 45px;
+}
+@media only screen and (min-width: 768px) {
+  #token .icon {
+    margin-bottom: 32px;
+    max-height: 100px;
+    min-height: 100px;
+  }
 }
 
 /****************************/
@@ -17557,7 +17631,7 @@ section .content + .content.fit {
 /***************************************/
 /* .section == segment for navigation */
 section.container {
-  padding: 0 !important;
+  padding: 0 0 64px !important;
   position: relative;
   z-index: 3;
 }
@@ -17585,8 +17659,7 @@ section.container {
 
 @media only screen and (min-width: 1024px) {
   .section .content {
-    max-width: 50rem;
-    max-width: 60rem;
+    max-width: 1300px;
   }
 }
 
@@ -17721,15 +17794,8 @@ header .index svg {
 
 header .index figure {
   height: 2.25rem;
-  width: 3rem;
+  width: 100%;
   font-size: 3rem;
-}
-@media only screen and (min-width: 768px) {
-  header .index figure {
-    height: 3rem;
-    width: 4rem;
-    font-size: 4rem;
-  }
 }
 
 header .index .index-infos {
@@ -17769,7 +17835,8 @@ header .index .index-infos {
 
 .contextual a span {
   position: relative;
-  font-size: inherit;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 .contextual a em {
@@ -17798,13 +17865,14 @@ header .index .index-infos {
 }
 
 .contextual.for-sections a:before {
+  background: #A3F8FF;
+  border-radius: 5px;
   content: "";
-  opacity: 0.5;
   display: block;
-  height: 0;
-  width: 0;
-  border: 10px solid #A3F8FF;
-  border-radius: 100%;
+  height: 10px;
+  margin: 2.5px 0;
+  opacity: 1;
+  width: 10px;
 }
 
 .contextual a span {
@@ -17814,13 +17882,20 @@ header .index .index-infos {
 
 .contextual a:hover span,
 .contextual a.active span {
-  opacity: 1;
   transform: translate(0, 0);
+  opacity: 1;
 }
 
-.contextual a:hover:before,
+.contextual a:hover:before {
+  background: linear-gradient(180deg, #0BE6F7 0%, #0874FC 100%);
+}
+
 .contextual a.active:before {
-  opacity: 1;
+  background: linear-gradient(180deg, #0BE6F7 0%, #0874FC 100%);
+  border-radius: 7.5px;
+  height: 15px;
+  width: 15px;
+  margin: 0 0 0 -2.5px;
 }
 
 /********************************/
@@ -17961,4 +18036,4 @@ header .index {
           animation: spinner 0.5s infinite linear;
 }
 
-/*# sourceMappingURL=lendscape_base.css.map?v=e3ae98bf7ab2ab6f52a4*/
+/*# sourceMappingURL=lendscape_base.css.map?v=b234a870b6a08e69d5e1*/

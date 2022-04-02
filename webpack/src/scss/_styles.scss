@@ -140,7 +140,7 @@ img {
 /********** INTRODUCTION **********/
 
 .site-baseline {
-	font-size: 1rem;
+	font-size: 20px;
 	font-weight: 300;
 	display:block;
 	line-height:1.3;
@@ -149,7 +149,7 @@ img {
 	text-transform: none;
 
 	@include media(m) {
-		font-size: 2rem;
+		font-size: 32px;
 		line-height: 1.1;
 	}
 }
@@ -189,7 +189,6 @@ img {
 /********** SECTION-TITLE **********/
 
 .section-title {
-	letter-spacing:.25em;
 	margin-bottom: space(8);
 	text-align:center;
 	text-transform:uppercase;
@@ -329,15 +328,21 @@ figure > svg {
 }
 
 .bg-logo-outline {
-	max-width: 1076px;
+	max-width: 800px;
 	position: fixed;
 	width: 100%;
     margin: 0;
-    top: 0;
+    top: 20vh;
     z-index: 2;
 
 	@include media(m) {
 		top: 10vh;
+	}
+
+	svg {
+		path {
+			transition: stroke-width 0.5s ease-in-out;
+		}
 	}
 }
 
@@ -396,20 +401,9 @@ figure > svg {
 	display:inline-flex;
 	width:100%;
 	max-width:16rem;
-	font-size:1em;
-	line-height:1em;
 	text-align:center;
 	justify-content: center;
 	margin:auto;
-}
-.icon.large {
-	font-size:3em;
-	font-size:4em;
-}
-.icon svg,
-.icon img {
-	height:1em;
-	width:1em;
 }
 
 .icon.outline {
@@ -417,6 +411,10 @@ figure > svg {
 	fill: none;
 	stroke-linecap: round;
 	stroke-linejoin: round;
+}
+
+.arrow-down {
+	width: space(4);
 }
 
 /** feather **/
@@ -444,10 +442,10 @@ figure > svg {
 	display:flex;
 	overflow:visible;
 	margin:auto;
-	max-width:16.5rem;
+	max-width:64px;
 
 	@include media(m) {
-		max-width:25rem;
+		max-width:124px;
 	}
 }
 .logo .logo-icon {
@@ -912,35 +910,44 @@ ol li:before {
 	margin:0;
 	width:100%;
 	flex-direction:row;
-	border:solid .75rem transparent;
-	border-left:solid .375rem transparent;
-	border-right:solid .375rem transparent;
+	border: solid .75rem transparent;
+	border-left-width: 8px;
+	border-right-width: 8px;
+	margin-bottom: space(3);
 
 	@include media(m) {
 		width:calc(100% / 3);
-		border:solid 2rem transparent;
-		border-left:solid .5rem transparent;
-		border-right:solid .5rem transparent;
+		border :solid 2rem transparent;
+		border-left-width: 10px;
+		border-right-width:10px;
+		margin-bottom: 0;
 	}
 }
 
 .grid.even .item {
-	width:50%;
+	width: 100%;
 
 	@include media(m) {
 		width:calc(100% / 3);
 		border:solid 2rem transparent;
-		border-left:solid .5rem transparent;
-		border-right:solid .5rem transparent;
+		border-left:solid 10px transparent;
+		border-right:solid 10px transparent;
 	}
 }
 
 .grid.alt .item {
 	@include media(m) {
+		width:calc(100% / 2);
+		border:solid 2rem transparent;
+		border-left:solid 10px transparent;
+		border-right:solid 10px transparent;
+	}
+
+	@include media(l) {
 		width:calc(100% / 4);
 		border:solid 2rem transparent;
-		border-left:solid .5rem transparent;
-		border-right:solid .5rem transparent;
+		border-left:solid 10px transparent;
+		border-right:solid 10px transparent;
 	}
 }
 
@@ -957,5 +964,49 @@ ol li:before {
 /********** ITEM CONTENT **********/
 
 .grid .item-content > .icon {
-	margin:0 auto space(6);
+	margin: 0 auto space(3);
+
+	@include media(m) {
+		margin-bottom: space(5);
+	}
+}
+
+#about {
+	.icon {
+		max-height: 45px;
+		min-height: 45px;
+
+		@include media(m) {
+			max-height: 90px;
+			min-height: 90px;
+		}
+	}
+}
+
+#value-proposition {
+	.icon {
+		margin-bottom: space(2);
+		max-height: 45px;
+		min-height: 45px;
+
+		@include media(m) {
+			margin-bottom: space(4);
+			max-height: 100px;
+			min-height: 100px;
+		}
+	}
+}
+
+#token {
+	.icon {
+		margin-bottom: space(2);
+		max-height: 45px;
+		min-height: 45px;
+
+		@include media(m) {
+			margin-bottom: space(4);
+			max-height: 100px;
+			min-height: 100px;
+		}
+	}
 }

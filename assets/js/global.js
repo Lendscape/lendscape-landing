@@ -201,7 +201,7 @@ function anchorsInit() {
 			// only if more than #
 			if (currentHref.length > 1) {
 				var offsetTop=$(currentHref).offset().top;
-				$.scrollTo(offsetTop,250);
+				$.scrollTo(offsetTop,500);
 			};
 		// new page
 		} else {
