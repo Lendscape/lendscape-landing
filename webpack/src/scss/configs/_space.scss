@@ -1,0 +1,26 @@
+//
+// Spacing Units
+$space: 8px;
+
+//
+// Maximum multiplier for generated classes
+$spacing-max-multiplier: 16;
+
+//
+// Spacing namespaces and directions
+$spacing-directions: (
+    null: null,
+    "-x": "-left" "-right",
+    "-y": "-top" "-bottom",
+    "-t": "-top",
+    "-r": "-right",
+    "-b": "-bottom",
+    "-l": "-left",
+) !default;
+
+//
+// Spacing properties to set
+$spacing-properties: (
+    "p": "padding",
+    "m": "margin",
+) !default;

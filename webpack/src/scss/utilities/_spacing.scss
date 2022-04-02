@@ -1,0 +1,86 @@
+/* _utility.spacing.scss */
+
+/**
+ * Utility classes to put specific spacing values onto elements.
+ *
+ *   .u-m-t {}
+ *   .u-p {}
+ *   .u-p-x {}
+ */
+
+@each $property-namespace, $property in $spacing-properties {
+
+    @each $direction-namespace, $direction-rules in $spacing-directions {
+
+        @for $size from 0 through $spacing-max-multiplier {
+
+            .u-#{$property-namespace}#{$direction-namespace}#{$size} {
+
+                @each $direction in $direction-rules {
+                   #{$property}#{$direction}: space($size) !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+// Responsive Modifiers
+@if $responsive {
+
+    @each $property-namespace, $property in $spacing-properties {
+
+        @each $direction-namespace, $direction-rules in $spacing-directions {
+
+            @each $name in $breakpoint-modifiers {
+
+                @include media($name) {
+
+                    @for $size from 0 through $spacing-max-multiplier {
+
+                        .u-#{$property-namespace}#{$direction-namespace}#{$size} {
+
+                            &\@#{$name} {
+
+                                @each $direction in $direction-rules {
+
+                                    #{$property}#{$direction}: space($size) !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//All Margin
+.u-m-a {
+	@for $i from 0 through $spacing-max-multiplier {
+		&#{$i} {
+			margin: ($space * $i);
+		}
+	}
+}
+
+.u-m-0-auto {
+    margin: 0 auto;
+}
+
+// All Padding
+.u-p-a {
+	@for $i from 0 through $spacing-max-multiplier {
+		&#{$i} {
+			padding: ($space * $i);
+		}
+	}
+}
+
+// Spacing block
+.spacing-block {
+    display: block;
+    width: 100%;
+    height: space(10);
+}

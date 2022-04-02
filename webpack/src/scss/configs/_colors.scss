@@ -1,0 +1,170 @@
+//
+// Global colour palette
+// stylelint-disable value-list-max-empty-lines
+$palettes: (
+	"black": (
+		1: #111111
+	),
+
+    "dark-blue":(
+		1: #202930
+	),
+
+    "mid-grey":(
+		1: #8C9CAE
+	),
+
+    "dark-grey":(
+		1: #587690
+	),
+
+    "light-grey":(
+		1: #D9D9D9
+	),
+
+    "red":(
+		1: #CD001C
+	),
+
+	"divider":(
+		1: #979797
+	),
+
+	"grey": (
+		1: #f8f8f8,
+		2: #616161,
+		3: #232121
+	),
+
+	"text":(
+		1: #666666,
+	),
+	"white": (
+		1: #ffffff
+	)
+
+);
+
+// Main brand colours
+$black: #000000;
+$white: #ffffff;
+$dark-blue: #202930;
+$dark-grey: #587690;
+$mid-grey: #8C9CAE;
+$light-grey: #D9D9D9;
+$primary-accent: #CD001C;
+
+$main-palette-primary-1-900: #202930;
+$main-palette-primary-2-300: #8c9cae;
+$main-palette-secondary-1-a-400: #587690;
+$main-palette-secondary-1-b-500: #d9d9d9;
+$main-palette-secondary-2-600: #ffffff;
+$main-palette-accent-1-700: #cd001c;
+$primary-1-extended-50: #d2d4d6;
+$primary-1-extended-100: #bcbfc1;
+$primary-1-extended-200: #a6a9ac;
+$primary-1-extended-300: #909498;
+$primary-1-extended-400: #797f83;
+$primary-1-extended-500: #63696e;
+$primary-1-extended-600: #63696e;
+$primary-1-extended-700: #4d5459;
+$primary-1-extended-800: #363e45;
+$primary-2-extended-50: #afbac6;
+$primary-2-extended-200: #98a6b6;
+$primary-2-extended-300: #98a6b6;
+$primary-2-extended-400: #707d8b;
+$primary-2-extended-500: #626d7a;
+$primary-2-extended-600: #545e68;
+$primary-2-extended-700: #464e57;
+$primary-2-extended-800: #383e46;
+$primary-2-extended-900: #2a2f34;
+$primary-2-extended-100: #a3b0be;
+$secondary-1-extended-50: #bcc8d3;
+$secondary-1-extended-100: #9badbc;
+$secondary-1-extended-200: #8a9fb1;
+$secondary-1-extended-300: #69849b;
+$secondary-1-extended-600: #465e73;
+$secondary-1-extended-700: #3e5365;
+$secondary-1-extended-800: #354756;
+$secondary-1-extended-900: #2c3b48;
+$secondary-1-extended-500: #4f6a82;
+$secondary-2-extended-50: #ececec;
+$secondary-2-extended-100: #e8e8e8;
+$secondary-2-extended-200: #e4e4e4;
+$secondary-2-extended-300: #e1e1e1;
+$secondary-2-extended-400: #dddddd;
+$secondary-2-extended-700: #aeaeae;
+$secondary-2-extended-800: #989898;
+$secondary-2-extended-900: #828282;
+$secondary-2-extended-600: #c3c3c3;
+$main-palette-accent-1-800: #b90019;
+$main-palette-accent-1-900: #a40016;
+$main-palette-accent-1-600: #d21a33;
+$main-palette-accent-1-500: #d73349;
+$main-palette-accent-1-400: #dc4d60;
+$main-palette-accent-1-300: #e16677;
+$main-palette-accent-1-200: #e6808e;
+$main-palette-accent-1-100: #eb99a4;
+$main-palette-accent-1-50: #eb99a4;
+$success-green-50: #ecfdf5;
+$success-green-100: #d1fae5;
+$success-green-200: #a7f3d0;
+$success-green-300: #6ee7b7;
+$success-green-400: #34d399;
+$success-green-500: #10b981;
+$success-green-600: #059669;
+$success-green-700: #047857;
+$success-green-800: #065f46;
+$success-green-900: #064e3b;
+$warning-yellow-50: #fffbeb;
+$warning-yellow-100: #fef3c7;
+$warning-yellow-200: #fde68a;
+$warning-yellow-300: #fcd34d;
+$warning-yellow-400: #fbbf24;
+$warning-yellow-500: #f59e0b;
+$warning-yellow-500: #f59e0b;
+$warning-yellow-600: #d97706;
+$warning-yellow-700: #b45309;
+$warning-yellow-800: #92400e;
+$warning-yellow-900: #78350f;
+$shades-white: #ffffff;
+$shades-black: #000000;
+$neutral-gray-50: #f8fafc;
+$neutral-gray-100: #f1f5f9;
+$neutral-gray-200: #e2e8f0;
+$neutral-gray-300: #cbd5e1;
+$neutral-gray-400: #94a3b8;
+$neutral-gray-500: #64748b;
+$neutral-gray-600: #475569;
+$neutral-gray-700: #334155;
+$neutral-gray-800: #1e293b;
+$neutral-gray-900: #0f172a;
+$neutral-primary-50: #e9eefb;
+$neutral-primary-100: #bac9f3;
+$neutral-primary-200: #8ea7ec;
+$neutral-primary-300: #6285e4;
+$neutral-primary-400: #325fdc;
+$neutral-primary-500: #1d4fd7;
+$neutral-primary-600: #163eac;
+$neutral-primary-700: #112f83;
+$neutral-primary-800: #0c1e55;
+$neutral-primary-900: #06102d;
+$dark-mode-dark-mode-900: #131825;
+$dark-mode-dark-mode-800: #1c212e;
+$dark-mode-dark-mode-700: #262a36;
+$dark-mode-dark-mode-600: #2f343f;
+$dark-mode-dark-mode-500: #393d48;
+$dark-mode-dark-mode-400: #424651;
+$dark-mode-dark-mode-300: #424651;
+$dark-mode-dark-mode-200: #4c4f59;
+$dark-mode-dark-mode-100: #555962;
+$dark-mode-dark-mode-50: #5f626b;
+$error-red-50: #fef2f2;
+$error-red-100: #fee2e2;
+$error-red-200: #fecaca;
+$error-red-300: #fca5a5;
+$error-red-400: #f87171;
+$error-red-500: #ef4444;
+$error-red-600: #dc2626;
+$error-red-800: #991b1b;
+$error-red-900: #7f1d1d;

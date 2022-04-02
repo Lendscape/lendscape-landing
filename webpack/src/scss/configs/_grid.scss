@@ -1,0 +1,51 @@
+//
+// Would you like the site to be Responsive?
+$responsive: true !default;
+
+//
+// Mobile first build
+$mobile-first: true !default;
+
+//
+// Would you like push and pull classes enabled?
+$grid-push-classes: false !default;
+$grid-pull-classes: false !default;
+
+//
+// Would you like the grid to be built using Flexbox?
+$enable-flex: true !default;
+
+//
+// Gutter widths
+$grid__gutter: 32px !default;
+
+//
+// Max wrapper width
+$grid__wrapper: 1300px !default;
+
+
+//
+// Define your breakpoints. The first value is the prefix that shall be used for
+// your classes
+/*
+$breakpoints:(
+    "xs" "(max-width: 375px)",
+    "s" "(max-width: 480px)",
+    "m" "(max-width: 768px)",
+    "l" "(max-width: 1024px)",
+    "xl" "(min-width: 1025px)"
+);
+*/
+$breakpoints:(
+    "xs" "(min-width: 375px)", // 375 <-
+    "s" "(min-width: 479px)",  // 375 <-> 480
+    "m" "(min-width: 768px)",  // 480 <-> 768
+    "l" "(min-width: 1024px)", // 768 <-> 1024
+    "xl" "(min-width: 1279px)" // 1024 ->
+) !default;
+
+//
+// Define which namespaced breakpoints you would like to generate. This is handy
+// if you only need pull on, say, xl, or you only need a new width breakpoint
+// at mobile sizes.
+$breakpoint-modifiers:("xl","l", "m", "s", "xs");

@@ -1,0 +1,8 @@
+/* _utility.underline.scss */
+
+.u-underline {
+	border-bottom: 1px solid palette("divider");
+	padding-bottom: 4px;
+}
+
+.u-underline-text { text-decoration: underline; }

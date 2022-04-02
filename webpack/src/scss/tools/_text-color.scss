@@ -1,0 +1,10 @@
+//
+// Set Text Colour based on Background
+@function set-text-color($background) {
+	@if (lightness($background) > 60) {
+		@return palette("text"); // Lighter background, return dark color
+	}
+	@else {
+		@return #ffffff; // Darker background, return light color
+	}
+}

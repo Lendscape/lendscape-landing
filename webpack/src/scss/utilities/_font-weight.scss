@@ -1,0 +1,68 @@
+/* _utility.font-weight.scss */
+
+.u-light {
+	font-weight: 300;
+}
+
+.u-normal {
+	font-weight: 400;
+}
+
+.u-medium {
+	font-weight: 500;
+}
+
+.u-semibold {
+	font-weight: 600;
+}
+
+.u-bold {
+	font-weight: 700;
+}
+
+.u-extrabold {
+	font-weight: 900;
+}
+
+// Responsive Declarations
+@if $responsive {
+	@each $name in $breakpoint-modifiers {
+		@include media($name) {
+			.u-light {
+				&\@#{$name} {
+					font-weight: 300;
+				}
+			}
+
+            .u-normal {
+                &\@#{$name} {
+                    font-weight: 400;
+                }
+            }
+            
+            .u-medium {
+                &\@#{$name} {
+                    font-weight: 500;
+                }
+            }
+            
+            .u-semibold {
+                &\@#{$name} {
+                    font-weight: 600;
+                }
+            }
+            
+            .u-bold {
+                &\@#{$name} {
+                    font-weight: 700;
+                }
+            }
+            
+            .u-extrabold {
+                &\@#{$name} {
+                    font-weight: 900;
+                }
+            }
+		}
+	}
+}

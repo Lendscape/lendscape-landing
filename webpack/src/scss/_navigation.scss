@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+/*************************/
+/*************************/
+/********** NAV **********/
+/*************************/
+/*************************/
+
+/*
+nav => default
+nav.centered
+*/
+
+nav a {
+	display:inline-block;
+}
+
+/********** CENTERED **********/
+
+nav.centered {
+	justify-content:center;
+}
+
+/****************************/
+/****************************/
+/********** SOCIAL **********/
+/****************************/
+/****************************/
+
+nav.socialbar,
+nav.sharebar {
+	align-items:center;
+	display:flex;
+	font-size:1rem;
+	justify-content:center;
+	line-height:1em;
+	white-space:nowrap;
+}
+nav.socialbar > *,
+nav.sharebar > * {
+	display:inline-block;
+	vertical-align:middle;
+}
+nav.socialbar a,
+nav.sharebar a {
+	padding:1em;
+}
+nav.socialbar > *:not(a),
+nav.sharebar > *:not(a) {
+	font-size:.5em;
+}
+nav.socialbar a > *
+nav.sharebar a > * {
+	display:block;
+	height:1em;
+	width:1em;
+}
+
+.socialbar--footer img {
+	max-width: 20px;
+}
+
+@include media(l) {
+	.socialbar--footer {
+		flex-direction: column-reverse;
+	}
+	
+	.socialbar--footer img {
+		max-width: 50px;
+	}
+}
+
+/********** ICONS **********/
+
+.socialbar .icon {
+	font-size:1.5em;
+}
+.socialbar .icon.outline svg {
+	stroke-width:.0625em;
+	fill:none;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+}
+
+/***************************/
+/***************************/
+/********** INDEX **********/
+/***************************/
+/***************************/
+
+/********** INDEX **********/
+
+header .index {
+	display:flex;
+	align-items:center;
+	margin:1.5rem;
+	font-size:.625rem;
+
+	@include media(m) {
+		margin:2rem;
+	}
+}
+header .index svg {
+	display:block;
+	height:100%;
+	height:inherit;
+	width:inherit;
+}
+header .index figure {
+	height:2.25rem;
+	width: 100%;
+	font-size:3rem;
+}
+header .index .index-infos {
+	display:none;
+}
+
+/********************************/
+/********************************/
+/********** CONTEXTUAL **********/
+/********************************/
+/********************************/
+
+/********** DEFAULT **********/
+
+.contextual {
+	margin:0;
+	padding:4.5rem 1.5rem;
+	pointer-events:none;
+	transition:transform .5s ease, opacity .5s ease;
+
+	@include media(m) {
+		padding:8rem 2rem;
+	}
+}
+.contextual a {
+	position:relative;
+	display:inline-flex;
+	align-items:center;
+	gap:1em;
+	font-size:inherit;
+	line-height:1em;
+	text-transform:uppercase;
+	pointer-events:auto;
+	margin:0;
+	padding-bottom: 8px;
+}
+.contextual a span {
+	position:relative;
+	font-size: 24px;
+	font-weight: 300;
+}
+.contextual a em {
+	font-style:inherit;
+}
+
+/********** SECTIONS **********/
+
+.contextual.for-sections {
+	position:fixed;
+	top:0;
+	left:0;
+	transform:translate(0,0);
+	display:none;
+	justify-content:center;
+	flex-direction:column;
+	gap:.5em;
+	font-size:.75em;
+	text-align:left;
+	height:100%;
+	padding:2rem 2rem 2rem 4.5rem;
+
+	@include media(m) {
+		display: inline-flex;
+	}
+}
+.contextual.for-sections a:before {
+	background: #A3F8FF;
+	border-radius: 5px;
+	content:"";
+	display:block;
+	height:10px;
+	margin: 2.5px 0;
+	opacity: 1;
+	width:10px;
+}
+.contextual a span {
+	opacity:0;
+	transform:translate(2em,0);
+}
+.contextual a:hover span,
+.contextual a.active span {
+	transform:translate(0,0);
+	opacity: 1;
+}
+
+.contextual a:hover:before {
+	background: linear-gradient(180deg, #0BE6F7 0%, #0874FC 100%);
+}
+
+.contextual a.active:before {
+	background: linear-gradient(180deg, #0BE6F7 0%, #0874FC 100%);
+	border-radius: 7.5px;
+	height: 15px;
+	width: 15px;
+	margin: 0 0 0 -2.5px;
+}

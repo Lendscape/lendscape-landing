@@ -1,0 +1,33 @@
+/* _element.lists.scss */
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: space(2);
+}
+
+ul {
+    list-style: disc outside;
+    margin-left: space(3);
+}
+
+li > {
+
+    ul,
+    ol {
+        margin-left: space(2);
+        margin-bottom: 0;
+    }
+
+}
+
+dd,
+dt {
+	display: inline-block;
+}
+
+dd {
+    margin-bottom: 0.5rem;
+    margin-left: 0; // Undo browser default
+}

@@ -1,0 +1,156 @@
+/* _utility.display.scss */
+
+//
+// Standard Declarations
+.u-table {
+	display: table;
+}
+
+.u-table-cell {
+	display: table-cell;
+}
+
+.u-table-row {
+	display: table-row;
+}
+
+.u-invisible {
+	visibility: hidden;
+}
+
+.u-visible {
+	visibility: visible;
+}
+
+.u-flex {
+	display: flex;
+}
+
+.u-inline {
+    display: inline;
+}
+
+.u-inline-block {
+    display: inline-block;
+}
+
+.u-block {
+    display: block !important;
+}
+
+.u-hidden {
+    display: none !important;
+}
+
+.u-print-block {
+	@media print {
+		display: block;
+	}
+}
+
+.u-print-inline-block {
+	@media print {
+		display: inline-block;
+	}
+}
+
+.u-print-hidden {
+	@media print {
+		display: none;
+	}
+}
+
+//
+// Responsive Declarations
+@if $responsive {
+	@each $name in $breakpoint-modifiers {
+		@include media($name) {
+
+			.u-table {
+				&\@#{$name} {
+					display: table;
+				}
+			}
+
+			.u-table-cell {
+				&\@#{$name} {
+					display: table-cell;
+				}
+			}
+
+			.u-table-row {
+				&\@#{$name} {
+					display: table-row;
+				}
+			}
+
+			.u-invisible {
+				&\@#{$name} {
+					visibility: hidden;
+				}
+			}
+
+			.u-visible {
+				&\@#{$name} {
+					visibility: visible;
+				}
+			}
+
+			.u-inline {
+				&\@#{$name} {
+		    		display: inline;
+				}
+			}
+
+			.u-inline-block {
+				&\@#{$name} {
+		    		display: inline-block;
+				}
+			}
+
+			.u-block {
+				&\@#{$name} {
+		    		display: block;
+				}
+			}
+
+            .u-flex {
+				&\@#{$name} {
+		    		display: flex;
+				}
+			}
+
+			.u-hidden {
+				&\@#{$name} {
+		    		display: none !important;
+				}
+			}
+
+			.u-print-block {
+				&\@#{$name} {
+					@media print {
+						display: block !important;
+					}
+				}
+			}
+
+			.u-print-inline-block {
+				&\@#{$name} {
+					@media print {
+						display: inline-block;
+					}
+				}
+			}
+
+			.u-print-hidden {
+				&\@#{$name} {
+					@media print {
+						display: none;
+					}
+				}
+			}
+
+
+		}
+	}
+}

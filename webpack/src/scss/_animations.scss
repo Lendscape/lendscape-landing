@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/********************************/
+/********************************/
+/********** ANIMATIONS **********/
+/********************************/
+/********************************/
+
+/** navigation **/
+
+.buttons a,
+.button {
+	transition:transform .25s ease, opacity .25s ease, border .25s ease !important;
+}
+
+header .index,
+nav a,
+nav a:after,
+.contextual,
+.contextual a:before {
+	transition:transform .25s ease;
+}
+.contextual a > * {
+	transition:transform .25s ease, opacity .25s ease;
+}
+
+/** animations **/
+
+.instant-transition {
+	transition:none;
+}
+
+/** onload **/
+
+body.onload .section .content > * {
+	transition:none;
+}
+
+/*****************************************/
+/*****************************************/
+/********** LOADING TRANSITIONS **********/
+/*****************************************/
+/*****************************************/
+
+#loading-transition {
+	position:fixed;
+	z-index:12000;
+	top:0;
+	left:0;
+	pointer-events:none;
+	height:100%;
+	width:100%;
+	opacity:0;
+	margin:0 !important;
+	transform:scale(1.05);
+}
+#loading-transition svg {
+	fill:rgb(255,255,255);
+	stroke:none;
+	height:100%;
+}
+body.onload #loading-transition,
+body.outload #loading-transition {
+	opacity:1;
+}
+#loading-transition {
+	transition:all 1s ease;
+}
+body.onload #loading-transition {
+	transition:none;
+}
+body.outload #loading-transition {
+	transition:all .5s ease;
+}
+
+/**********************************/
+/**********************************/
+/********** INTRODUCTION **********/
+/**********************************/
+/**********************************/
+
+body.onload .contextual.for-sections {
+	transition:none;
+}
+body.onload .contextual.for-sections,
+body.onload header .index,
+body.introduced .contextual.for-sections,
+body.introduced header .index {
+	opacity:0;
+	pointer-events:none;
+}
+body.onload .contextual.for-sections,
+body.onload header .index,
+body.introduced .contextual.for-sections,
+body.introduced header .index {
+	transform:translate(-100%,0%);
+}
+header .index {
+	transform:translate(0%,0%);
+}
+
+/****************************/
+/****************************/
+/********** LOADER **********/
+/****************************/
+/****************************/
+
+/** icon only **/
+
+.loader:before {
+	content:"" !important;
+	display:inline-block;
+	height:1rem;
+	width:1rem;
+	margin:-.25rem;
+	border-radius:50%;
+	border-style:solid;
+	border-width:0.125rem;
+	border-color: inherit inherit inherit transparent;
+	animation: spinner 1s infinite linear;
+}
+
+/** loading txt **/
+
+.loading:before {
+	content:"";
+	display:inline-block;
+	vertical-align:middle;
+	height:.75em;
+	width:.75em;
+	margin:-.375em .375em -.375em -.375em;
+	border-radius:50%;
+	border-style:solid;
+	border-width:0.125em;
+	border-color: inherit inherit inherit transparent;
+	animation: spinner .5s infinite linear;
+}

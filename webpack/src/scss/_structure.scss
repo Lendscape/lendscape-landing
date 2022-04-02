@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+/****************************/
+/****************************/
+/********** GLOBAL **********/
+/****************************/
+/****************************/
+
+/********** BODY **********/
+
+body {
+	-webkit-overflow-scrolling:touch;
+	overflow-x:hidden;
+	color:rgb(26,26,26);
+	text-shadow:none;
+}
+
+/********** WRAPPER **********/
+
+#wrapper {
+	position:relative;
+	min-height:100%;
+	transition: all 0.5s ease-in-out;
+}
+
+/********** HEADER **********/
+
+header {
+	position:fixed;
+	z-index:1200;
+	top:0;
+	left:0;
+	width:100%;
+	pointer-events:none;
+	display:flex;
+	align-items:flex-start;
+	justify-content:space-between;
+	color:inherit;
+	stroke:inherit;
+}
+header > * {
+	z-index:10;
+	pointer-events:auto;
+}
+
+/********** MAIN **********/
+
+main {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+}
+main > *:not(nav) {
+	margin:0 auto;
+}
+main > *:first-child {
+	margin-top:0;
+}
+main > *:last-child {
+	margin-bottom:0;
+}
+
+/********** FOOTER **********/
+
+footer {
+	position:fixed;
+	z-index:1000;
+	left:0;
+	bottom:0;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	width:100%;
+	pointer-events:none;
+	padding:1rem;
+
+	@include media(m) {
+		padding: 2rem;
+	}
+}
+footer > * {
+	text-align:center;
+	pointer-events:auto;
+	margin:0 !important;
+}
+footer .copyright {
+	padding:1rem;
+	margin:0;
+}
+
+/********** FOOTER AT BOTTOM **********/
+
+html,
+body {
+	height:100%;
+}
+#wrapper {
+	display:flex;
+	flex-direction:column;
+}
+#wrapper main {
+	flex-grow:1;
+}
+
+/********** GRADIENT FX **********/
+/* in front for dark-mixed */
+
+body:before {
+	content:"";
+	position:fixed;
+	z-index:100;
+	mix-blend-mode:multiply;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	pointer-events:none;
+}
+/******************************/
+/******************************/
+/********** SECTIONS **********/
+/******************************/
+/******************************/
+
+/*
+.cover == Fullscreen (100vh) min-height
+.full == no padding
+*/
+
+section {
+	position:relative;
+	z-index:10;
+	display:block;
+	overflow:initial;
+	padding:1.5rem;
+
+	@include media(m) {
+		padding:2rem;
+	}
+
+	@include media(l) {
+		padding:6rem;
+	}
+}
+section .content {
+	z-index:10;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+
+	@include media(l) {
+		max-width:50rem;
+		max-width:60rem;
+	}
+}
+section.full {
+	padding:0 !important;
+}
+section.cover {
+	min-height:100vh;
+}
+section .content + .content.fit {
+	margin-top:0 !important;
+}
+
+/***************************************/
+/***************************************/
+/********** SECTION CONTAINER **********/
+/***************************************/
+/***************************************/
+
+/* .section == segment for navigation */
+
+section.container {
+	padding:0 0 space(8) !important;
+	position: relative;
+	z-index: 3;
+}
+
+/** SECTIONS **/
+
+.section {
+	/*position:static;*/
+	display:flex;
+	align-items:center;
+	flex-direction: column;
+	width:100%;
+	max-width:none;
+	padding:1.5rem;
+
+	@include media(m) {
+		padding:2rem;
+	}
+
+	@include media(l) {
+		padding:6rem;
+	}
+}
+
+.section .content {
+	@include media(l) {
+		max-width:1300px;
+	}
+}
+
+.section .content > * {
+	opacity:0;
+	transition: opacity 0.25s ease-in-out;
+}
+.section.active .content > * {
+	opacity:1;
+}
+.section.cover {
+	min-height:100vh;
+}
+.section .content {
+	margin:auto;
+}
+
+section .content.short,
+.section .content.short {
+	@include media(l) {
+		max-width:40%;
+	}
+}

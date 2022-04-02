@@ -1,0 +1,34 @@
+/* _element.inputs.scss */
+
+input[type="text"],
+input[type="password"],
+textarea {
+	max-width: 100%;
+}
+
+textarea {
+	min-height: space(10);
+	resize: vertical;
+}
+
+input[type="search"] {
+	box-sizing: inherit;
+	-webkit-appearance: none;
+}
+
+[type="submit"] {
+	background: none;
+	border: none;
+}
+
+[tabindex="-1"]:focus {
+	outline: none !important;
+}
+
+label {
+	display: inline-block;
+}
+
+[hidden] {
+	display: none !important;
+}

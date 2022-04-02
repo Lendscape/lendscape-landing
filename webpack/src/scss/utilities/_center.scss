@@ -1,0 +1,12 @@
+/* _utility.center.scss */
+
+.u-center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.u-middle {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}

@@ -1,0 +1,22 @@
+/* _utility.colors.scss */
+
+.u-color-,
+.u-c- {
+	@each $palette, $color in $palettes {
+		&#{$palette} {
+			color: palette($palette);
+
+			@if(palette($palette, 2)) {
+				&2 {
+					color: palette($palette, 2);
+				}
+			}
+
+			@if(palette($palette, 3)) {
+				&3 {
+					color: palette($palette, 3);
+				}
+			}
+		}
+	}
+}

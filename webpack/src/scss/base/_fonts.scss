@@ -1,3 +1,5 @@
+/* _base.fonts.scss */
+
 @charset "UTF-8";
 
 /***************************/
@@ -5,29 +7,9 @@
 /********** ICONS **********/
 /***************************/
 /***************************/
-
-@font-face {
-	font-family:'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon.svg#fontello') format('svg');
-	font-weight:normal;
-	font-style:normal;
-	font-display: swap;
-}
 [class^="icon-"] {
-	display:-webkit-inline-box;
-	display:-webkit-inline-flex;
-	display:-moz-inline-box;
-	display:-ms-inline-flexbox;
 	display:inline-flex;
-	-webkit-box-align:center;
-	-webkit-align-items:center;
-	   -moz-box-align:center;
-	    -ms-flex-align:center;
-	        align-items:center;
+	align-items:center;
 	height:1em;
 }
 [class^="icon-"]:before {
@@ -45,6 +27,11 @@
 	color:inherit;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background: linear-gradient(to bottom, #0BE3F7 0%,#0874FC 100%);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color:transparent;
 }
 
 /********** ICONS **********/
@@ -185,39 +172,6 @@ content: "\e911";
 content: "\e912";
 }
 
-/***************************/
-/***************************/
-/********** FONTS **********/
-/***************************/
-/***************************/
-
-@font-face {
-    font-family: 'Nexa Demo';
-    src: url('fonts/NexaDemo-Bold.html');
-    src: url('fonts/NexaDemo-Boldd41d.html?#iefix') format('embedded-opentype'),
-        url('fonts/NexaDemo-Bold-2.html') format('woff2'),
-        url('fonts/NexaDemo-Bold-3.html') format('woff'),
-        url('fonts/NexaDemo-Bold-4.html') format('truetype'),
-        url('fonts/NexaDemo-Bold-5.html#NexaDemo-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Nexa Text Demo';
-    src: url('fonts/NexaTextDemo-Bold.html');
-    src: url('fonts/NexaTextDemo-Boldd41d.html?#iefix') format('embedded-opentype'),
-        url('fonts/NexaTextDemo-Bold-2.html') format('woff2'),
-        url('fonts/NexaTextDemo-Bold-3.html') format('woff'),
-        url('fonts/NexaTextDemo-Bold-4.html') format('truetype'),
-        url('fonts/NexaTextDemo-Bold-5.html#NexaTextDemo-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* + @import in header */
-
 /*********************************/
 /*********************************/
 /********** FONT FAMILY **********/
@@ -266,44 +220,48 @@ h2.hidden + * {
 	margin-top:0;
 }
 
-/********** @MEDIA **********/
+body { 
+	font-size:.75rem;
 
-@media (min-width:0px) {
-	body { 
-		font-size:.75rem;
-	}
-	.main-title {
-		font-size:2rem;
-	}
-	h1,
-	h2 {
+	@include media(m) {
 		font-size:1rem;
 	}
-	h3, h4, h5, h6 {
-		font-size:inherit;
-	}
-	.excerpt {
-		font-size:.875rem;
-	}
-	.section-title {
+}
+.main-title {
+	font-size:2rem;
+}
+
+h1 {
+	font-size:1rem;
+
+	@include media(m) {
 		font-size:1.5rem;
 	}
 }
-@media (min-width:760px) {
-	body { 
-		font-size:1rem;
-	}
-	h1 {
-		font-size:1.5rem;
-	}
-	h2 {
+
+h2 {
+	font-size:1rem;
+
+	@include media(m) {
 		font-size:1.25rem;
 	}
-	.excerpt {
+}
+
+h3, h4, h5, h6 {
+	font-size:inherit;
+}
+.excerpt {
+	font-size:.875rem;
+
+	@include media(m) {
 		font-size:1.25rem;
 	}
-	.section-title {
-		font-size:5rem;
+}
+.section-title {
+	font-size:40px;
+
+	@include media(m) {
+		font-size: 64px;
 	}
 }
 
@@ -330,68 +288,48 @@ label.hidden + * {
 	position:relative;
 }
 
-/********** @MEDIA **********/
+/* default style */
+h1 + *,
+h2 + *,
+h3 + *,
+h4 + *,
+h5 + *,
+h6 + *,
+.excerpt + * {
+	margin-top:1.25rem;
 
-@media (min-width:0px) {
-	/* default style */
-	h1 + *,
-	h2 + *,
-	h3 + *,
-	h4 + *,
-	h5 + *,
-	h6 + *,
-	.excerpt + * {
-		margin-top:1.25rem;
-	}
-	ul > li + li,
-	ol > li + li {
-		margin-top:.25rem;
-	}
-	p + *,
-	pre + *,
-	blockquote + *,
-	hr + *,
-	ul + *,
-	ol + *,
-	figure + *,
-	img + *,
-	svg + * {
-		margin-top:1.25rem;
-	}
-	/* custom style */
-	.grid + *,
-	.columns + *,
-	.columnizer + *,
-	nav + *,
-	.buttons + *,
-	.button + *,
-	* + .buttons,
-	* + hr,
-	* + .button {
-		margin-top:1.25rem;
+	@include media(l) {
+		margin-top:2.5rem;
 	}
 }
-@media (min-width:1000px) {
-	/* default style */
-	h1 + *,
-	h2 + *,
-	h3 + *,
-	h4 + *,
-	h5 + *,
-	h6 + *,
-	.excerpt + * {
-		margin-top:2.5rem;
-	}
-	/* custom style */
-	.grid + *,
-	.columns + *,
-	nav + *,
-	.buttons + *,
-	.button + * {
-		margin-top:2.5rem;
-	}
-	* + hr,
-	* + .button {
+ul > li + li,
+ol > li + li {
+	margin-top:.25rem;
+}
+p + *,
+pre + *,
+blockquote + *,
+hr + *,
+ul + *,
+ol + *,
+figure + *,
+img + *,
+svg + * {
+	margin-top:1.25rem;
+}
+/* custom style */
+.grid + *,
+.columns + *,
+.columnizer + *,
+nav + *,
+.buttons + *,
+.button + *,
+* + .buttons,
+* + hr,
+* + .button {
+	margin-top:1.25rem;
+
+	@include media(l) {
 		margin-top:2.5rem;
 	}
 }

@@ -1,0 +1,90 @@
+/* _utility.font-size */
+
+.u-text-meta {
+	@include rem(font-size, 12px);
+    line-height: 18px;
+}
+
+.u-text-small {
+	@include rem(font-size, 14px);
+    line-height: 20px;
+}
+
+.u-text-normal {
+	@include rem(font-size, 16px);
+    line-height: 24px;
+}
+
+.u-text-subheading {
+	@include rem(font-size, 20px);
+    line-height: 28px;
+}
+
+.u-text-medium {
+	@include rem(font-size, 22px);
+    line-height: 30px;
+}
+
+.u-text-display {
+	@include rem(font-size, 60px);
+    line-height: 68px;
+
+    @include media(s) {
+        @include rem(font-size, 40px);
+        line-height: 48px;
+    }
+}
+
+// Headings
+@if $responsive {
+    @each $name in $breakpoint-modifiers {
+		@include media($name) {
+            @each $size, $headers in $headings {
+                @include media($size) {
+                    @each $header, $font in $headers {
+
+                        .u-text-#{$header}\@#{$name} {
+                            @include rem(font-size, nth($font, 1));
+                            @if length($font)>1 {
+                                @include rem(line-height, nth($font, 2));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+// Responsive Declarations
+@if $responsive {
+	@each $name in $breakpoint-modifiers {
+		@include media($name) {
+			.u-text-meta\@#{$name} {
+				@include rem(font-size, 12px);
+                line-height: 18px;
+			}
+
+			.u-text-small\@#{$name} {
+				@include rem(font-size, 14px);
+                line-height: 20px;
+			}
+
+			.u-text-normal\@#{$name} {
+				@include rem(font-size, 16px);
+                line-height: 24px;
+			}
+
+            .u-text-subheading\@#{$name} {
+                @include rem(font-size, 20px);
+                line-height: 28px;
+            }
+
+			.u-text-medium\@#{$name} {
+				@include rem(font-size, 22px);
+                line-height: 28px;
+			}
+		}
+	}
+}

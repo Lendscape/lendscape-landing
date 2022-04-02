@@ -1,0 +1,148 @@
+/* _utility.align.scss */
+
+//
+// Standard Declarations
+.u-align-left,
+.u-a-left {
+    text-align: left;
+}
+
+.u-align-right,
+.u-a-right {
+    text-align: right;
+}
+
+.u-align-center,
+.u-a-center {
+    text-align: center;
+}
+
+.u-align-middle,
+.u-a-middle {
+    @if (not $enable-flex) {
+        vertical-align: middle;
+    }
+	@else {
+        align-self: center;
+    }
+}
+
+.u-align-top,
+.u-a-top {
+    @if (not $enable-flex) {
+        vertical-align: top;
+    }
+	@else {
+        align-self: flex-start;
+    }
+}
+
+.u-align-bottom
+.u-a-bottom {
+    @if (not $enable-flex) {
+        vertical-align: bottom;
+    }
+	@else {
+        align-self: flex-end;
+    }
+}
+
+.u-align-baseline,
+.u-a-baseline {
+    @if (not $enable-flex) {
+        vertical-align: baseline;
+    }
+	@else {
+        align-self: baseline;
+    }
+}
+
+@if $enable-flex {
+    .u-align-full,
+    .u-a-full {
+        align-self: stretch;
+    }
+}
+
+.u-align-initial,
+.u-align-initial {
+    vertical-align: initial;
+}
+
+
+//
+// Responsive Declarations
+@if $responsive {
+    @each $name in $breakpoint-modifiers {
+        @include media($name) {
+
+            .u-align-left\@#{$name},
+            .u-a-left\@#{$name} {
+                text-align: left;
+            }
+
+            .u-align-right\@#{$name},
+            .u-a-right\@#{$name} {
+                text-align: right;
+            }
+
+            .u-align-center\@#{$name},
+            .u-a-center\@#{$name} {
+                text-align: center;
+            }
+
+            .u-align-middle\@#{$name},
+            .u-a-middle\@#{$name} {
+                @if (not $enable-flex) {
+                    vertical-align: middle;
+                }
+	            @else {
+                    align-self: center;
+                }
+            }
+
+            .u-align-top\@#{$name},
+            .u-a-top\@#{$name} {
+                @if (not $enable-flex) {
+                    vertical-align: top;
+                }
+	            @else {
+                    align-self: flex-start;
+                }
+            }
+
+            .u-align-bottom\@#{$name},
+            .u-a-bottom\@#{$name} {
+                @if (not $enable-flex) {
+                    vertical-align: bottom;
+                }
+	            @else {
+                    align-self: flex-end;
+                }
+            }
+
+            .u-align-baseline\@#{$name},
+            .u-a-baseline\@#{$name} {
+                @if (not $enable-flex) {
+                    vertical-align: baseline;
+                }
+	            @else {
+                    align-self: baseline;
+                }
+            }
+
+            @if $enable-flex {
+                .u-align-full\@#{$name},
+                .u-a-full\@#{$name} {
+                    align-self: stretch;
+                }
+            }
+
+            .u-align-initial\@#{$name},
+            .u-a-initial\@#{$name} {
+                vertical-align: initial;
+            }
+
+        }
+    }
+}

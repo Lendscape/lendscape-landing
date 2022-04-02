@@ -1,0 +1,59 @@
+/* _utility.position.scss */
+
+.u-relative {
+	position: relative;
+}
+
+.u-absolute {
+	position: absolute;
+}
+
+.u-fixed {
+	position: fixed;
+}
+
+.u-print-relative {
+	@media print {
+		position: relative;
+	}
+}
+
+.u-print-absolute {
+	@media print {
+		position: absolute;
+	}
+}
+
+.u-print-fixed {
+	@media print {
+		position: fixed;
+	}
+}
+
+//
+// Responsive Declarations
+@if $responsive {
+	@each $name in $breakpoint-modifiers {
+		@include media($name) {
+
+			.u-relative {
+				&\@#{$name} {
+					position: relative;
+				}
+			}
+
+			.u-absolute {
+				&\@#{$name} {
+					position: absolute;
+				}
+			}
+
+			.u-fixed {
+				&\@#{$name} {
+					position: fixed;
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,25 @@
+//
+// Standardise some UI treatments.
+$radius-small: 2px !default;
+$radius: 4px !default;
+$radius-large: 8px !default;
+
+$easing: ease-out !default;
+$speed: 120ms !default;
+$transition: all $speed $easing !default;
+
+//
+// Ratios
+$global-ratios: (
+    (1:1),
+    (2:1),
+    (4:3),
+    (16:9),
+) !default;
+
+//
+// Leter spacing parameters
+$letter-params: (
+    "\\+" "",
+    "\-" "-"
+) !default;
