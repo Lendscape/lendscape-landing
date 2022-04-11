@@ -100,3 +100,5 @@ dist/
 
 .idea/
 stats.json
+
+yarn.lock
