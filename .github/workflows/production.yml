@@ -15,7 +15,7 @@ env:
 jobs:
   production:
     name: Production
-    runs-on: ubuntu-latest
+    runs-on: self-hosted 
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.4.1
