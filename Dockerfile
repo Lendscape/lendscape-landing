@@ -14,5 +14,6 @@ RUN rm -rf /usr/app/webpack
 
 # Run
 FROM nginx
+
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /usr/app /usr/share/nginx/html
