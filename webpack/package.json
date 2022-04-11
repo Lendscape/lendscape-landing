@@ -14,7 +14,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=development webpack --env MODE=dev --config ./configs/webpack.dev.js",
     "watch": "npm run build -- --watch",
-    "prod": "cross-env NODE_ENV=production webpack --config ./configs/webpack.prod.js",
+    "prod": "NODE_ENV=production cross-env NODE_ENV=production webpack --config ./configs/webpack.prod.js",
     "analyse": "npm run prod -- --profile --json | findstr /v /r \"^> $\" > stats.json && webpack-bundle-analyzer ./stats.json",
     "test": "jest",
     "lint": "eslint . --ext .js,.ts,.tsx",
