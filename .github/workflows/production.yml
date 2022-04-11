@@ -7,7 +7,6 @@ on:
 
 env:
   KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
-  KUBE_NAMESPACE: lendscape
   KUBE_DEPLOYMENT: landing
   ECR_REPOSITORY: lendscape-landing
   IMAGE_TAG: ${{ github.sha }}
@@ -53,12 +52,12 @@ jobs:
         env:
           RELEASE_IMAGE: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY}}:${{ env.IMAGE_TAG }}
         with:
-          args: set image deploy/$KUBE_DEPLOYMENT $KUBE_DEPLOYMENT=$RELEASE_IMAGE -n $KUBE_NAMESPACE
+          args: set image deploy/$KUBE_DEPLOYMENT $KUBE_DEPLOYMENT=$RELEASE_IMAGE
 
       - name: Verify Kubernetes deployment
         uses: kodermax/kubectl-aws-eks@master
         with:
-          args: rollout status deploy $KUBE_DEPLOYMENT -n $KUBE_NAMESPACE
+          args: rollout status deploy $KUBE_DEPLOYMENT
 
       - name: Run Discord Webhook
         uses: johnnyhuy/actions-discord-git-webhook@main
