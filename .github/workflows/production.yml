@@ -3,7 +3,7 @@ name: Production
 on:
   push:
     branches:
-      - devops
+      - main
 
 env:
   KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
